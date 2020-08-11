@@ -8,34 +8,18 @@ let nlbtn = document.getElementById('nlbtn');
 let daylife = document.getElementById('daylife');
 let procontent = document.getElementById('product');
 
-function panelover() {
-    panel.style.animation="panelmove .5s ease-in-out";
-    panel.style.left=" 76vw";
-}
-function panelout(){
-    panel.style.animation="panelout .5s ease-in-out"
-    panel.style.left="96vw";
-}
-panel.onmouseover = function(){
-    panelover();
-}
-panel.onmouseout = function(){
-    panelout();
-}
 
-console.log(procontent);
-// product.innerHTML =`<div>hello</div>`
+// localStorage.setItem('daylife', 'night')
 let daylifecontent = localStorage.getItem('daylife');
-// product.innerHTML += localStorage.getItem('daylife');
-nlbtn.addEventListener("click",function(){
-    daylifecontent = `<div class="layout-pro" id='night'></div>
+if (daylifecontent == "night") {
+    let content4 = `<div class="layout-pro" id='night'></div>
     <div class="panel" id='panel'>
         <div class="panel-icon"><i class="fas fa-cog"></i></div>
         <div class="panel-content" id='panelcontent'>
             <div class="panel-main-content">Navigation Life</div>
             <div class="panel-button">
-                <button class="nightlife-btn" id='nlbtn'>Day Life</button>
-                <button class="daylife-btn" id='dlbtn'>Night Life</button>
+                <button class="nightlife-btn" id='dlbtn'>Day Life</button>
+                <button class="daylife-btn" id='nlbtn'>Night Life</button>
             </div>
         </div>
     </div>
@@ -77,20 +61,35 @@ nlbtn.addEventListener("click",function(){
                 </span>
         </div>
     </div>
-    <button class="btnviewnight" >View All >></button>
-    `;
-    nlbtn.style.backgroundColor='#333';
-    nlbtn.style.color='#fff';
-    nlbtn.style.border='4px solid #333'
-    dlbtn.style.backgroundColor="#fff";
-    dlbtn.style.border='4px solid #dedede';
-    dlbtn.style.color='#333';
-    localStorage.setItem('daylife',daylifecontent);
-    window.location.reload();
-});
+    <button class="btnviewnight" >View All >></button>`;
 
-dlbtn.addEventListener("click",function(){
-    daylifecontent = `  <div class="layout-pro" id='day'></div>
+
+    procontent.innerHTML = content4;
+    panel = document.getElementById('panel');
+    dlbtn = document.getElementById('dlbtn');
+    nlbtn = document.getElementById('nlbtn');
+    nlbtn.addEventListener("click", function () {
+        // nlbtn.style.backgroundColor = '#333';
+        // nlbtn.style.color = '#fff';
+        // nlbtn.style.border = '4px solid #333'
+        // dlbtn.style.backgroundColor = "#fff";
+        // dlbtn.style.border = '4px solid #dedede';
+        // dlbtn.style.color = '#333';
+        localStorage.setItem('daylife', 'night');
+        window.location.reload();
+    });
+    dlbtn.addEventListener("click", function () {
+        // dlbtn.style.backgroundColor = '#333';
+        // dlbtn.style.color = '#fff';
+        // dlbtn.style.border = '4px solid #333';
+        // nlbtn.style.backgroundColor = "#fff";
+        // nlbtn.style.border = '4px solid #dedede';
+        // nlbtn.style.color = '#333';
+        localStorage.setItem('daylife', 'day');
+        window.location.reload();
+    });
+} else if (daylifecontent == "day") {
+    let content4 = `<div class="layout-pro" id='day'></div>
     <div class="panel" id='panel'>
         <div class="panel-icon"><i class="fas fa-cog"></i></div>
         <div class="panel-content" id='panelcontent'>
@@ -148,19 +147,53 @@ dlbtn.addEventListener("click",function(){
             </span>
         </div>
     </div>
-    <button class="btn-viewall">View All >></button>
-`;
-    dlbtn.style.backgroundColor='#333';
-    dlbtn.style.color='#fff';
-    dlbtn.style.border='4px solid #333';
-    nlbtn.style.backgroundColor="#fff";
-    nlbtn.style.border='4px solid #dedede';
-    nlbtn.style.color='#333';
-    localStorage.setItem('daylife',daylifecontent);
-    window.location.reload();
-})
+    <button class="btn-viewall">View All >></button>`;
 
-console.log(localStorage.getItem('daylife'));
+    procontent.innerHTML = content4;
+    panel = document.getElementById('panel');
+    dlbtn = document.getElementById('dlbtn');
+    nlbtn = document.getElementById('nlbtn');
+    nlbtn.addEventListener("click", function () {
+        // nlbtn.style.backgroundColor = '#333';
+        // nlbtn.style.color = '#fff';
+        // nlbtn.style.border = '4px solid #333'
+        // dlbtn.style.backgroundColor = "#fff";
+        // dlbtn.style.border = '4px solid #dedede';
+        // dlbtn.style.color = '#333';
+        localStorage.setItem('daylife', 'night');
+        window.location.reload();
+    });
+    dlbtn.addEventListener("click", function () {
+        // dlbtn.style.backgroundColor = '#333';
+        // dlbtn.style.color = '#fff';
+        // dlbtn.style.border = '4px solid #333';
+        // nlbtn.style.backgroundColor = "#fff";
+        // nlbtn.style.border = '4px solid #dedede';
+        // nlbtn.style.color = '#333';
+        localStorage.setItem('daylife', 'day');
+        window.location.reload();
+    });
+}
+
+function panelover() {
+    panel.style.animation = "panelmove .5s ease-in-out";
+    panel.style.left = " 76vw";
+}
+function panelout() {
+    panel.style.animation = "panelout .5s ease-in-out"
+    panel.style.left = "96vw";
+}
+panel.addEventListener('mouseover', () => {
+    panelover();
+    
+})
+panel.onmouseout = function () {
+    panelout();
+}
+
+
+
+
 
 let layoutleft = document.getElementById('layoutleft');
 let layoutright = document.getElementById('layoutright');
@@ -169,27 +202,27 @@ let preright = document.getElementById('preright');
 let preloading = document.getElementById('preloading');
 
 
-console.log(preloading);
-window.onload = function() {
+
+window.onload = function () {
     preload();
-    function preload(){
+    function preload() {
         preleft.style.animation = 'preloadleft 1s ease-in-out';
         preright.style.animation = 'preloadright 1s ease-in-out';
         preleft.style.height = '100vh';
         preright.style.height = '100vh';
-        setTimeout(function(){
+        setTimeout(function () {
             preleft.style.animation = 'premoveleft .5s ease-in-out';
             preright.style.animation = 'premoveright .5s ease-in-out';
             layoutleft.style.animation = 'layoutleft .5s ease-in-out';
             layoutright.style.animation = 'layoutright .5s ease-in-out';
-        },1000);
-        setTimeout(function(){
-            preloading.style.display='none';
-        },1500);
+        }, 1000);
+        setTimeout(function () {
+            preloading.style.display = 'none';
+        }, 1500);
     };
     showup();
     function showup() {
-        setTimeout(function() {
+        setTimeout(function () {
             sologan.style.display = "block";
             about.style.opacity = "1";
         }, 800)
@@ -211,24 +244,24 @@ window.onload = function() {
     let procont2 = document.getElementById('procont2');
     let procont3 = document.getElementById('procont3');
     let procont4 = document.getElementById('procont4');
-    window.addEventListener("scroll", function() {
+    window.addEventListener("scroll", function () {
         let x = pageYOffset;
         if (x > 400 && x < 1300) {
             am2.style.animation = "longbottom 1s ease-in-out";
-            setTimeout(function() {
+            setTimeout(function () {
                 bdpic.style.animation = "border-pic 1s ease-in-out";
                 abpic.style.animation = "ab-pic 1s ease-in-out"
                 rdText.style.animation = "random-text 1s ease-in-out ";
                 share.style.animation = "share 1s ease-in-out";
             }, 0)
-            setTimeout(function() {
+            setTimeout(function () {
                 bdpic.style.display = 'block';
                 abpic.style.display = 'block';
                 abText.style.display = 'block';
                 share.style.display = 'block';
                 rdText.style.display = 'block';
             }, 200);
-            setTimeout(function() {
+            setTimeout(function () {
                 am2.style.width = "14vw";
             }, 900)
         }
@@ -243,7 +276,7 @@ window.onload = function() {
             spAnimate5.style.animation = 'sp-animate1 1s ease-in-out';
             spAnimate6.style.animationDelay = '1s';
             spAnimate6.style.animation = 'sp-animate2 1s ease-in-out';
-            setTimeout(function() {
+            setTimeout(function () {
                 spAnimate1.style.width = '4vw';
                 spAnimate1.style.top = '-4vh';
                 spAnimate1.style.right = '0vw';
@@ -285,23 +318,23 @@ for (let i = 1; i < 5; i++) {
     document.getElementById(`show_${i}`).addEventListener("click", () => show(i));
 }
 
-var mySwiper = new Swiper ('.swiper-container', {
+var mySwiper = new Swiper('.swiper-container', {
     // Các Parameters
     loop: true,
 
     // Nếu cần pagination
     pagination: {
-      el: '.swiper-pagination',
+        el: '.swiper-pagination',
     },
 
     // Nếu cần navigation
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
 
     // Nếu cần scrollbar
     scrollbar: {
-      el: '.swiper-scrollbar',
+        el: '.swiper-scrollbar',
     },
-  })
+})

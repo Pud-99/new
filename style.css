@@ -10,6 +10,8 @@
 body {
     position: relative;
     outline: none !important;
+    width: 100vw;
+    height: 100vh;
 }
 .pre-loading{
     display:flex;
@@ -884,6 +886,8 @@ button {
 .daylife-btn:hover{
     cursor: pointer;
 }
+
+
 .nightlife-btn:active{
     animation: clickanimate .2s ease-in-out;
 }
