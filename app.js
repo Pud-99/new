@@ -8,8 +8,10 @@ let nlbtn = document.getElementById('nlbtn');
 let daylife = document.getElementById('daylife');
 let procontent = document.getElementById('product');
 
+if (localStorage.getItem('daylife') == null){
+    localStorage.setItem('daylife', 'night');
+}
 
-// localStorage.setItem('daylife', 'night')
 let daylifecontent = localStorage.getItem('daylife');
 if (daylifecontent == "night") {
     let content4 = `<div class="layout-pro" id='night'></div>
