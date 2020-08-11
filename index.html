@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puha</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css" />
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="./animate.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://kit.fontawesome.com/814f87baf2.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="./parallax/parallax.js-1.5.0/parallax.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+
+<body></body>
+<div class="pre-loading" id='preloading'>
+    <div class="layout-load-left" id="layoutleft"></div>
+    <div class="pre-left" id="preleft">
+    </div>
+    <div class="layout-load-right" id="layoutright"></div>
+    <div class="pre-right" id="preright">
+    </div>
+</div>
+<video controls muted autoplay loop style="z-index: -9999; position: absolute; width: 100vw; height: 110vh;clip-path: polygon(0 0, 100% 0, 100% 91%, 0 91%);
+">
+    <source src="./video/Kidding - The inside stuff.mp4">
+</video>
+<div class="layout"></div>
+
+<div class="content my-data" id="home" data-spy="scroll" data-tagert="#mymenu" data-offset="0">
+    <div class="nav  sticky-top ">
+        <div class="logo"><img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABNCAYAAAAW92IAAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAxNJREFUeNrsnIGtmzAQhkneAozABuVt4G5AN6Ab0A3YgHYCRkg3IJ3A2YC3Ad2AGsnVsxB2wt3FZwefZKFEiXE+H/7vzlbesoPbWwKQACQACUACcGA7bb05z3OpLkv7UO12Op3+Hg1Ari5StcJ4+6qvf1RbgNwWQArOx72b6P5K4631a9Ouqs8rO5nFC2Y+m1TrVSu4ITQzry0gWm4Iw8xvUq9LLAByPRNzAN5Qc0Go5nCMDUIXEATxVBl0QJAO+fJpi/S+U8Qn552f/65jAG5b5LE5qjSai2Lu9REwIFzUpVpFb183Pic2or8vqgn9Gms/1H1/hiCNA1BZsDGG5AyQBAYA4SOVc0JosQB0P3UIkggdvMQCQIbcKDU4EzD4RiSNv4DfyzNuo0pbgR7QcntA9khR5EHzXgg5Zwe3BCBLFo4BF8HqJTwA8UNurzL7EjD740usAVrLIYWW368w85g8oPA1yPIJfRZLXQHx43ufszRRpZ26DtCHUA3aK08Sc1MjdaawyvdzinY7wg2WmjtAaRD9iFg3RchcELjBwrc3aAEwYQa0I+gZ2Wb9gRh9hC6K+uzBdOdsQJWFYo4ZwlSDtwKgLsYsDaMMF4tnlTEBAK/OWhpH6jWGK08XxNIYDoQd4WkJ7L91yF8eCwDUgB3S2MUEYNY7x9Ds0CaNZUwAwLPmOIs0xAYAowx9cJugiOSlBNzLJo1DjABAhQvHMV0RKoDBUduTQAgN1QLrBYAR1ExU4bLlzEARLABDziTFNralitQHDcAY+IWikGKRxiJoAI4QdwIqQ8fqBVAARt4/YQop2qMkmxdgABiyNmLO921UkdpoAFhmsQeMo2HZHKEAYAl1a8BYLt69gBLAxkwKwHowefUCagCroGm3MqyqSG2UAIyFTULCZUMaRx8A5DMArIKmATGu+tkA8jsQKM4Kd3sLKUYVyYsX2PJ0slxdB00V4Dt+Nk4dW1qsJSv9CI2+brYFgRtA7nUjdQMCb9Hyc0yD7xtOoQAwsk/BASEIAP8hcLhemNvaye5b+heZowP4J8AAFvxZXRABM4AAAAAASUVORK5CYII=">
+        </div>
+        <div class="nav-content" id="mymenu">
+            <div class="nav-item"><a data-scroll href="#home">Home <br>
+                    <p class="dot-item">.</p>
+                </a>
+            </div>
+            <div class="nav-item"><a data-scroll href="#about-main">About<br>
+                    <p class="dot-item">.</p>
+                </a>
+            </div>
+            <div class="nav-item"><a data-scroll href="#product">Protfolio<br>
+                    <p class="dot-item">.</p>
+                </a>
+            </div>
+            <div class="nav-item"><a data-scroll href="#service">Services <br>
+                    <p class="dot-item">.</p>
+                </a>
+            </div>
+            <div class="nav-item"><a data-scroll href="#team">Teamate<br>
+                    <p class="dot-item">.</p>
+                </a>
+            </div>
+            <div class="nav-item"><a data-scroll href="#contact">Contact<br>
+                    <p class="dot-item">.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="sologan sign" id="sologan">
+        <div class="main-sologan fast-flicker"><span class="main-sologan flicker">W</span>e A<span
+                class="main-sologan flicker">r</span><span class="main-sologan fast-flicker">e R<span
+                    class="main-sologan flicker">u</span></span><span class="main-sologan flicker"></span>l<span
+                class="main-sologan flicker">e</span></div>
+        <div class="sp-sologan neons">We keeps moment</div>
+    </div>
+    <div class="about-content fast-flicker" id="about">
+        <div class="about-content-move">
+            < </div>
+                <div class="about-content-item ">About Us</div>
+        </div>
+
+    </div>
+    <div class="content2 my-data" id="about-main">
+        <div class="content-2-left">
+            <div class="about-pic" id="abpic"></div>
+            <div class="border-pic" id="bdpic"></div>
+        </div>
+        <div class="content-2-right">
+            <div class="about-text" id="abText">
+                <div class="text">About Us</div>
+                <div class="text-animate1" id="am1"></div>
+                <div class="text-animate2" id="am2"></div>
+            </div>
+            <div class="random-text" id="rdText">For instance, whenever I go back to the guest house during the morning
+                to copy out the contract, these gentlemen are always still sitting there eating their breakfasts. I
+                ought to just try that witht my boss; I'd get kicked out on the spot.<br><br> But who knows, maybe that
+                would be the best thing for me. He'd fall right off his desk! And it's a funny sort of business to be
+                sitting up there at your desk, talking down at your subordinates. I ought to just try that witht my
+                boss; I'd
+                get kicked out on the spot. But who knows, maybe that would be the best thing for me. He'd fall right
+                off his desk! And it's a funny sort of business to be sitting up there at your desk, talking down at
+                your subordinates.
+
+            </div>
+            <div class="share" id="share">
+                <span class="animate__animated animate__bounce animate__delay-2s">Share:</span>
+                <span><i class="fab fa-facebook-f"></i></span>
+                <span><i class="fab fa-twitter"></i></span>
+                <span><i class="fab fa-dribbble"></i></span>
+                <span><i class="fab fa-linkedin-in"></i></span>
+                <span><i class="fab fa-instagram"></i></span>
+            </div>
+        </div>
+    </div>
+    <div class="content3 ">
+        <div class="sp-ab" id="spab1">
+
+            <div class="sp-content"><i class="fas fa-photo-video"></i> Video </div>
+            <div class="sp-text">I ought to just try that with my boss; I'd get kicked out on the spot. But who knows,
+                maybe that would be the best</div>
+            <div class="sp-animate1" id="spAnimate1"></div>
+            <div class="sp-animate2" id="spAnimate2"></div>
+        </div>
+        <div class="sp-ab">
+
+            <div class="sp-content"><i class="far fa-images"></i> Picture</div>
+            <div class="sp-text">I ought to just try that with my boss; I'd get kicked out on the spot. But who knows,
+                maybe that would be the best</div>
+            <div class="sp-animate1" id="spAnimate3"></div>
+            <div class="sp-animate2" id="spAnimate4"></div>
+        </div>
+        <div class="sp-ab">
+            <div class="sp-content"><i class="fas fa-users"></i> Community</div>
+            <div class="sp-text">I ought to just try that with my boss; I'd get kicked out on the spot. But who knows,
+                maybe that would be the best</div>
+            <div class="sp-animate1" id="spAnimate5"></div>
+            <div class="sp-animate2" id="spAnimate6"></div>
+        </div>
+    </div>
+    <div class="content4 my-data" id="product">
+        <!-- <div class="layout-pro" id='day'></div>
+        <div class="panel" id='panel'>
+            <div class="panel-icon"><i class="fas fa-cog"></i></div>
+            <div class="panel-content" id='panelcontent'>
+                <div class="panel-main-content">Navigation Life</div>
+                <div class="panel-button">
+                    <button class="daylife-btn" id='dlbtn'>Day Life</button>
+                    <button class="nightlife-btn" id='nlbtn'>Night Life</button>
+                </div>
+            </div>
+        </div>
+        <div class="content4-text">
+            <div class="content4-headertext">Hello There,</div>
+            <div class="content4-middletext">We're just two lost Souls swimming in a Fish Bowl & Winning Design Awards
+            </div>
+            <div class="content4-bottomtext">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, et,
+                praesentium? Odit perferendis error natus cum, laudantium ea!</div>
+        </div>
+        <div class="product-daylife" id="daylife">
+            <div class="parallax-window rowimg" id='pic1' data-parallax="scroll" data-z-index="1"
+                data-image-src="./anh/1.jpg">
+                <span class="pro-content" style="z-index: 9999;" id="procont1">
+                    <div class="desgin-pro">Design by / Puha</div>
+                    <div class="content-main-pro">One night bar 1980s</div>
+                    <div class="more-info" id="info_1">One night at hero bar in 1980s where all ladies and gentelmen
+                        having crazy night</div>
+                    <button class="btn-info" id="show_1">More Info</button>
+                </span>
+            </div>
+            <div class="parallax-window coling" id='pic2' data-parallax="scroll" data-z-index="1"
+                data-image-src="./anh/2.jpg">
+                <span class="pro-content" style="z-index: 9999;" id="procont2">
+                    <div class="desgin-pro">Design by / Puha</div>
+                    <div class="content-main-pro">One night bar 1980s</div>
+                    <div class="more-info" id="info_2">One night at hero bar in 1980s where all ladies and gentelmen
+                        having crazy night</div>
+                    <button class="btn-info" id="show_2">More Info</button>
+                </span></div>
+            <div class="parallax-window coling" id='pic3' data-parallax="scroll" data-z-index="1"
+                data-image-src="./anh/5.jpg">
+                <span class="pro-content" style="z-index: 9999;" id="procont3">
+                    <div class="desgin-pro">Design by / Puha</div>
+                    <div class="content-main-pro">One night bar 1980s</div>
+                    <div class="more-info" id="info_3">One night at hero bar in 1980s where all ladies and gentelmen
+                        having crazy night</div>
+                    <button class="btn-info" id="show_3">More Info</button>
+                </span></div>
+            <div class="parallax-window rowimg" id='pic4' data-parallax="scroll" data-z-index="1"
+                data-image-src="./anh/3.jpg">
+                <span class="pro-content" style="z-index: 9999;" id="procont4">
+                    <div class="desgin-pro">Design by / Puha</div>
+                    <div class="content-main-pro">One night bar 1980s</div>
+                    <div class="more-info" id="info_4">One night at hero bar in 1980s where all ladies and gentelmen
+                        having crazy night</div>
+                    <button class="btn-info" id="show_4">More Info</button>
+                </span>
+            </div>
+        </div>
+        <button class="btn-viewall">View All >></button> -->
+
+
+
+        <div class="layout-pro" id='night'></div>
+        <div class="panel" id='panel'>
+            <div class="panel-icon"><i class="fas fa-cog"></i></div>
+            <div class="panel-content" id='panelcontent'>
+                <div class="panel-main-content">Navigation Life</div>
+                <div class="panel-button">
+                    <button class="nightlife-btn" id='nlbtn'>Day Life</button>
+                    <button class="daylife-btn" id='dlbtn'>Night Life</button>
+                </div>
+            </div>
+        </div>
+        <div class="content4-text">
+            <div class="content4-headertext" id='headernight'>Hello There,</div>
+            <div class="content4-middletext" id='middlenight'>We're just two lost Souls swimming in a Fish Bowl &
+                Winning Design Awards
+            </div>
+            <div class="content4-bottomtext" id='bottomnight'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Velit, et, praesentium? Odit perferendis error natus cum, laudantium ea!</div>
+        </div>
+        <div class="product-daylife" id="daylife">
+            <div class="parallax-window rowimgnight" id='pic1' data-parallax="scroll" data-z-index="1"
+                data-image-src="./anh/3.jpg">
+                <span class="pro-content" style="z-index: 9999;" id="procont1">
+                    <div class="desgin-pro">Design by / Puha</div>
+                    <div class="content-main-pro">One night bar 1980s</div>
+                    <div class="more-info" id="info_1">One night at hero bar in 1980s where all ladies and gentelmen
+                        having crazy night</div>
+                    <button class="btn-info" id="show_1">More Info</button>
+                </span>
+            </div>
+            <div class="parallax-window colingnight" id='pic2' data-parallax="scroll" data-z-index="1"
+                data-image-src="./anh/5.jpg">
+                <span class="pro-content" style="z-index: 9999;" id="procont2">
+                    <div class="desgin-pro">Design by / Puha</div>
+                    <div class="content-main-pro">One night bar 1980s</div>
+                    <div class="more-info" id="info_2">One night at hero bar in 1980s where all ladies and gentelmen
+                        having crazy night</div>
+                    <button class="btn-info" id="show_2">More Info</button>
+                </span></div>
+            <div class="parallax-window colingnight" id='pic3' data-parallax="scroll" data-z-index="1"
+                data-image-src="./anh/2.jpg">
+                <span class="pro-content" style="z-index: 9999;" id="procont3">
+                    <div class="desgin-pro">Design by / Puha</div>
+                    <div class="content-main-pro">One night bar 1980s</div>
+                    <div class="more-info" id="info_3">One night at hero bar in 1980s where all ladies and gentelmen
+                        having crazy night</div>
+                    <button class="btn-info" id="show_3">More Info</button>
+                </span></div>
+            <div class="parallax-window rowimgnight" id='pic4' data-parallax="scroll" data-z-index="1"
+                data-image-src="./anh/1.jpg">
+                <span class="pro-content" style="z-index: 9999;" id="procont4">
+                    <div class="desgin-pro">Design by / Puha</div>
+                    <div class="content-main-pro">One night bar 1980s</div>
+                    <div class="more-info" id="info_4">One night at hero bar in 1980s where all ladies and gentelmen
+                        having crazy night</div>
+                    <button class="btn-info" id="show_4">More Info</button>
+                </span>
+            </div>
+        </div>
+        <button class="btnviewnight">View All >></button>
+    </div>
+    <div class="content5 my-data" id="service">
+
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="serv-img" style="background-image: url(./anh/serv3.jpg);"></div>
+                    <div class="layout-serv"></div>
+                    <div class="content-serv">
+                        <div class="content-service">Services</div>
+                        <div class="content-serv-main">The Picture</div>
+                        <div class="content-serv-text">We provide image for all customer to entertain their good Lorem
+                            ipsum dolor sit amet, consectetur adipisicing elit. Velit, et, praesentium? Odit perferendis
+                            error natus cum, laudantium ea!</div>
+                        <div class="content-serv-price">19$/1 cast</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="serv-img" style="background-image: url(./anh/serv2.jpg);"></div>
+                    <div class="layout-serv"></div>
+                    <div class="content-serv">
+                        <div class="content-service">Services</div>
+                        <div class="content-serv-main">The Video</div>
+                        <div class="content-serv-text">We provide video for all customer to entertain their good Lorem
+                            ipsum dolor sit amet, consectetur adipisicing elit. Velit, et, praesentium? Odit perferendis
+                            error natus cum, laudantium ea!</div>
+                        <div class="content-serv-price">39$/1 cast</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="serv-img" style="background-image: url(./anh/serv1.jpg);"></div>
+                    <div class="layout-serv"></div>
+                    <div class="content-serv">
+                        <div class="content-service">Services</div>
+                        <div class="content-serv-main">The Actor</div>
+                        <div class="content-serv-text">We provide actor for all customer to entertain their good Lorem
+                            ipsum dolor sit amet, consectetur adipisicing elit. Velit, et, praesentium? Odit perferendis
+                            error natus cum, laudantium ea!</div>
+                        <div class="content-serv-price">59$/1 cast</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Nếu cần pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- Nếu cần navigation -->
+            <div class="swiper-button-prev" style="color: black; outline: none;"></div>
+            <div class="swiper-button-next" style="color: black; outline: none;"></div>
+
+            <!-- Nếu cần scrollbar -->
+
+        </div>
+    </div>
+    <div class="content6 my-data" id="team">
+        <div class="team-content">
+            <div class="team-content-main">THETEAM</div>
+            <div class="team-content-under"></div>
+            <div class="team-content-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, et,
+                praesentium? Odit perferendis error natus cum, laudantium ea! Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit. Velit, et, praesentium? Odit perferendis error natus cum, laudantium ea!</div>
+        </div>
+        <div class="team-item">
+            <div class="teamitemcontent" id="teamitem1" style="background-image: url(./anh/jack.jpg);">
+                <div class="team-logo"><img src="https://rokstar-portfolio.netlify.app/assets/img/icon/logo.png"></div>
+                <div class="team-function">The Taker</div>
+                <div class="team-layout"></div>
+                <div class="team-name">SPECTRE</div>
+                <div class="share" id="share-team">
+                    <span class="animate__animated animate__bounce animate__delay-2s"></span>
+                    <span><i class="fab fa-facebook-f"></i></span>
+                    <span><i class="fab fa-twitter"></i></span>
+                    <span><i class="fab fa-dribbble"></i></span>
+                    <span><i class="fab fa-linkedin-in"></i></span>
+                    <span><i class="fab fa-instagram"></i></span>
+                </div>
+            </div>
+            <div class="teamitemcontent"id="teamitem2" style="background-image: url(./anh/tony.jpg);">
+                <div class="team-logo"><img src="https://rokstar-portfolio.netlify.app/assets/img/icon/logo.png"></div>
+                <div class="team-function">The Picture</div>
+                <div class="team-layout"></div>
+                <div class="team-name">PUHA</div>
+                <div class="share" id="share-team">
+                    <span class="animate__animated animate__bounce animate__delay-2s"></span>
+                    <span><i class="fab fa-facebook-f"></i></span>
+                    <span><i class="fab fa-twitter"></i></span>
+                    <span><i class="fab fa-dribbble"></i></span>
+                    <span><i class="fab fa-linkedin-in"></i></span>
+                    <span><i class="fab fa-instagram"></i></span>
+                </div>
+            </div>
+
+
+            <div class="teamitemcontent"id="teamitem3" style="background-image: url(./anh/boyka.jpg);">
+                <div class="team-layout"></div>
+                <div class="team-logo"><img src="https://rokstar-portfolio.netlify.app/assets/img/icon/logo.png"></div>
+                <div class="team-function">The Actor</div>
+                <div class="team-name">PUDDING</div>
+                <div class="share" id="share-team">
+                    <span class="animate__animated animate__bounce animate__delay-2s"></span>
+                    <span><i class="fab fa-facebook-f"></i></span>
+                    <span><i class="fab fa-twitter"></i></span>
+                    <span><i class="fab fa-dribbble"></i></span>
+                    <span><i class="fab fa-linkedin-in"></i></span>
+                    <span><i class="fab fa-instagram"></i></span>
+                </div>
+            </div>
+
+
+            <div class="teamitemcontent"id="teamitem4" style="background-image: url(./anh/blackwidow.jpg);">
+                <div class="team-logo"><img src="https://rokstar-portfolio.netlify.app/assets/img/icon/logo.png"></div>
+                <div class="team-function">The Manager</div>
+                <div class="team-layout"></div>
+                <div class="team-name">TRANGTHU</div>
+                <div class="share" id="share-team">
+                    <span class="animate__animated animate__bounce animate__delay-2s"></span>
+                    <span><i class="fab fa-facebook-f"></i></span>
+                    <span><i class="fab fa-twitter"></i></span>
+                    <span><i class="fab fa-dribbble"></i></span>
+                    <span><i class="fab fa-linkedin-in"></i></span>
+                    <span><i class="fab fa-instagram"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content7 my-data" id="contact">
+
+        <div class="big_row">
+            <div class="col-left">
+
+                <h2 class="Set_">Get In Touch</h2>
+                <div class="Gach_ngang">
+                    <div class="dau"></div>
+                    <div class="cuoi"></div>
+                </div>
+
+                <ul class="menu">
+                    <li>Address: Mindx Thành Công, Hà Nội</li>
+                    <li>Gmail: @123gmail.com</li>
+                    <li>Number: +84 1245678</li>
+                </ul>
+                <div class="share" id="share-footer">
+                    <span class="animate__animated animate__bounce animate__delay-2s">Share:</span>
+                    <span><i class="fab fa-facebook-f"></i></span>
+                    <span><i class="fab fa-twitter"></i></span>
+                    <span><i class="fab fa-dribbble"></i></span>
+                    <span><i class="fab fa-linkedin-in"></i></span>
+                    <span><i class="fab fa-instagram"></i></span>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-right">
+
+            <div class="col-md-1">
+                <input type="text" class="name" name="name" placeholder="Name Here*">
+            </div>
+            <div class="col-md-1">
+                <input type="text" class="email" name="email" placeholder="Email Here*">
+            </div>
+
+            <textarea name="msg" class="msg" placeholder="Message Here*"></textarea>
+            <div class="form-submit">
+                <button type="submit" name="submit" class="cnt_submit">Send Message <i
+                        class="fa fa-long-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="#home">
+            <div class="btn-uptotop"><i class="fas fa-angle-up"></i></div>
+        </a>
+        <div class="logo-footer">
+            <img src="https://rokstar-portfolio.netlify.app/assets/img/icon/flogo.png">
+        </div>
+        <div class="copy-right">@Copyright By Puha</div>
+    </div>
+</div>
+
+<script src="./app.js"></script>
+<script src="./jquery/jquery-3.5.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" -->
+<!-- integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script> -->
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script>
+    var scroll = new SmoothScroll('a[href*="#"]');
+</script>
+<script type="text/javascript" src="js/wow.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.x.x/js/swiper.min.js"></script>
+
+</body>
+
+</html>
