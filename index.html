@@ -102,7 +102,6 @@
                 get kicked out on the spot. But who knows, maybe that would be the best thing for me. He'd fall right
                 off his desk! And it's a funny sort of business to be sitting up there at your desk, talking down at
                 your subordinates.
-
             </div>
             <div class="share" id="share">
                 <span class="animate__animated animate__bounce animate__delay-2s">Share:</span>
@@ -353,15 +352,15 @@
         <div class="col-right">
 
             <div class="col-md-1">
-                <input type="text" class="name" name="name" placeholder="Name Here*">
+                <input type="text" class="name" name="name" id="input_name"style="padding-left: 5px;" placeholder="Name Here*">
             </div>
             <div class="col-md-1">
-                <input type="text" class="email" name="email" placeholder="Email Here*">
+                <input type="text" class="email" name="email" id="input_email"style="padding-left: 5px;" placeholder="Email Here*">
             </div>
 
-            <textarea name="msg" class="msg" placeholder="Message Here*"></textarea>
+            <textarea name="msg" class="msg" id="input_mess" placeholder="Message Here*"style="padding-left: 5px;"  ></textarea>
             <div class="form-submit">
-                <button type="submit" name="submit" class="cnt_submit">Send Message <i
+                <button type="submit" name="submit" id="send_mess" class="cnt_submit">Send Message <i
                         class="fa fa-long-arrow-right"></i></button>
             </div>
         </div>
@@ -376,7 +375,7 @@
         <div class="copy-right">@Copyright By Puha</div>
     </div>
 </div>
-
+<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
 <script src="./app.js"></script>
 <script src="./jquery/jquery-3.5.0.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -385,9 +384,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>
-<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" -->
-<!-- integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script> -->
 <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 <script>
     var scroll = new SmoothScroll('a[href*="#"]');
