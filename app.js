@@ -1,4 +1,4 @@
-let sologan = document.getElementById("sologan");
+let slogan = document.getElementById("slogan");
 let about = document.getElementById("about");
 
 let panel = document.getElementById('panel')
@@ -225,7 +225,7 @@ window.onload = function () {
     showup();
     function showup() {
         setTimeout(function () {
-            sologan.style.display = "block";
+            slogan.style.display = "block";
             about.style.opacity = "1";
         }, 800)
     }

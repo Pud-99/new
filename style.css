@@ -226,7 +226,7 @@ video {
     font-family: "clip"
 }
 
-.sologan {
+.slogan {
     display: flex;
     flex-direction: column;
     margin-left: 11vw;
@@ -235,13 +235,13 @@ video {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.main-sologan {
+.main-slogan {
     font-size: 65px;
     font-weight: bold;
     letter-spacing: 3px;
 }
 
-.sp-sologan {
+.sp-slogan {
     font-size: 28px;
     letter-spacing: 3px;
     padding-left: 1vw;
