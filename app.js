@@ -324,6 +324,7 @@ window.onload = function () {
         if (z1>=7001 && z<=8677){
             teamitem2.style.animation = 'itemmovetop2 .7s ease-in-out';
             teamitem2.style.top= '-45vh';
+            teamitem2.style.opacity='1';
         }
         let z2 = pageYOffset
         if (z2>=7401 && z<=8800){
@@ -331,9 +332,10 @@ window.onload = function () {
             teamitem3.style.marginLeft= '0vw';
         }
         let z3 = pageYOffset 
-        if (z3>=7701 && z<=9600){
+        if (z3>=7801 && z<=9600){
             teamitem4.style.animation = 'itemmovetop4 .7s ease-in-out';
             teamitem4.style.top= '-125vh';
+            teamitem4.style.opacity='1';
         }
         let z4 = pageYOffset
         if(z4>=9200){

@@ -1042,7 +1042,7 @@ height: 280vh;
     position: relative;
     left: 47vw;
     top: -5vh;
-    /* animation: itemmoveleft 1s ease-in-out; */
+    opacity: 0;
 }
 #teamitem3{
     position: relative;
@@ -1053,6 +1053,7 @@ height: 280vh;
     position: relative;
     left: 47vw;
     top: -85vh;
+    opacity: 0;
 }
 #teamitem4 .team-name{
     left: -14vw !important;
