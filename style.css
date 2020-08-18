@@ -1170,15 +1170,16 @@ color: #f3f2f2;
    align-items: center;
    margin-top: 3vh;
    margin-left: 15vw;
+  
 }
 .Set_{
 height:46px;
 box-sizing:border-box;
 color:rgb(34, 34, 34);
 display:flex;
-font-family: 'Times New Roman', Times, serif;
-font-size:29px;
-font-weight:bolder;
+font-family: 'Crimson Text', serif;
+font-size:40px;
+font-weight:800;
 position:relative;
 text-align:left;
 margin-bottom:3px;
