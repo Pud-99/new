@@ -34,10 +34,55 @@ button {
     height: 40px;
     border: none;
     outline: none;
+    border-right: 1px solid #dedede;
 }
 button:hover {
     cursor: pointer;
     border: 1px solid darkgray;
     background-color: darkgray;
     color: white;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+.display{
+    display: none;
+}
+.nav-display{
+width: 15vw;
+height: 20vh;
+border: 1px solid black;
+
+}
+.nav-display ul {
+height: 20vh;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: space-between;
+margin-left: 2vw;
+}
+
+.display-content{
+    position: relative;
+    top:-20vh;
+    left: 20vw;
+    width: 70vw;
+    border: 1px solid black;
+    padding-top: 3vh;
+    padding-bottom: 5vh;
+    padding-left: 1vw;
+}
+
+#portcontent{
+    display: none;
+    justify-content: space-around;
+}
+
+.produce{
+    font-size: 22px;
+    font-weight: 600;
+    color: crimson !important;
 }

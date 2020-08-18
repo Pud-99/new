@@ -8,75 +8,76 @@ let nlbtn = document.getElementById('nlbtn');
 let daylife = document.getElementById('daylife');
 let procontent = document.getElementById('product');
 
+
+
 if (localStorage.getItem('daylife') == null){
     localStorage.setItem('daylife', 'night');
 }
 
 let daylifecontent = localStorage.getItem('daylife');
 if (daylifecontent == "night") {
-    let content4 = `<div class="layout-pro" id='night'></div>
-    <div class="panel" id='panel'>
-        <div class="panel-icon"><i class="fas fa-cog"></i></div>
-        <div class="panel-content" id='panelcontent'>
-            <div class="panel-main-content">Navigation Life</div>
-            <div class="panel-button">
-                <button class="nightlife-btn" id='dlbtn'>Day Life</button>
-                <button class="daylife-btn" id='nlbtn'>Night Life</button>
+    async function ApiPortfolio() {
+        const response = await fetch('https://5f37ee6ebbfd1e00160bf74a.mockapi.io/api/Portfolio');
+        const data = await response.json();
+        localStorage.setItem('content-night',`<div class="layout-pro" id='night'></div>
+        <div class="panel" id='panel'>
+            <div class="panel-icon"><i class="fas fa-cog"></i></div>
+            <div class="panel-content" id='panelcontent'>
+                <div class="panel-main-content">Navigation Life</div>
+                <div class="panel-button">
+                    <button class="nightlife-btn" id='dlbtn'>Day Life</button>
+                    <button class="daylife-btn" id='nlbtn'>Night Life</button>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="content4-text">
-        <div class="content4-headertext" id='headernight'>Hello There,</div>
-        <div class="content4-middletext" id='middlenight'>We're just two lost Souls swimming in a Fish Bowl & Winning Design Awards
+        <div class="content4-text" style="font-family: 'Crimson Text', serif;">
+            <div class="content4-headertext" id='headernight'>Hello There,</div>
+            <div class="content4-middletext" id='middlenight'>We're just two lost Souls swimming in a Fish Bowl & Winning Design Awards
+            </div>
+            <div class="content4-bottomtext"id='bottomnight'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, et, praesentium? Odit perferendis error natus cum, laudantium ea!</div>
         </div>
-        <div class="content4-bottomtext"id='bottomnight'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, et, praesentium? Odit perferendis error natus cum, laudantium ea!</div>
-    </div>
-    <div class="product-daylife" id="daylife">
-        <div class="parallax-window rowimgnight" id='pic1' data-parallax="scroll" data-z-index="1" data-image-src="./anh/3.jpg">
-            <span class="pro-content" style="z-index: 9999;" id="procont1">
-                <div class="desgin-pro">Design by / Puha</div>
-                <div class="content-main-pro">One night bar 1980s</div>
-                <div class="more-info" id="info_1">One night at hero bar in 1980s where all ladies and gentelmen having crazy night</div>
-                <button class="btn-info"  id="show_1">More Info</button>
-            </span>
-        </div>
-        <div class="parallax-window colingnight" id='pic2' data-parallax="scroll" data-z-index="1" data-image-src="./anh/5.jpg">
-            <span class="pro-content" style="z-index: 9999;" id="procont2">
+        <div class="product-daylife" id="daylife">
+            <div class="parallax-window rowimgnight" id='pic1' data-parallax="scroll" data-z-index="1" data-image-src="${data[5].img}">
+                <span class="pro-content" style="z-index: 9999;" id="procont1">
                     <div class="desgin-pro">Design by / Puha</div>
                     <div class="content-main-pro">One night bar 1980s</div>
-                    <div class="more-info" id="info_2">One night at hero bar in 1980s where all ladies and gentelmen having crazy night</div>
-                    <button class="btn-info" id="show_2" >More Info</button>
-                </span></div>
-        <div class="parallax-window colingnight" id='pic3' data-parallax="scroll" data-z-index="1" data-image-src="./anh/2.jpg">
-            <span class="pro-content" style="z-index: 9999;" id="procont3">
-                    <div class="desgin-pro">Design by / Puha</div>
-                    <div class="content-main-pro">One night bar 1980s</div>
-                    <div class="more-info" id="info_3">One night at hero bar in 1980s where all ladies and gentelmen having crazy night</div>
-                    <button class="btn-info"  id="show_3" >More Info</button>
-                </span></div>
-        <div class="parallax-window rowimgnight" id='pic4' data-parallax="scroll" data-z-index="1" data-image-src="./anh/1.jpg">
-            <span class="pro-content" style="z-index: 9999;" id="procont4">
-                    <div class="desgin-pro">Design by / Puha</div>
-                    <div class="content-main-pro">One night bar 1980s</div>
-                    <div class="more-info" id="info_4">One night at hero bar in 1980s where all ladies and gentelmen having crazy night</div>
-                    <button class="btn-info"  id="show_4">More Info</button>
+                    <div class="more-info" id="info_1">One night at hero bar in 1980s where all ladies and gentelmen having crazy night</div>
+                    <button class="btn-info"  id="show_1">More Info</button>
                 </span>
+            </div>
+            <div class="parallax-window colingnight" id='pic2' data-parallax="scroll" data-z-index="1" data-image-src="./anh/5.jpg">
+                <span class="pro-content" style="z-index: 9999;" id="procont2">
+                        <div class="desgin-pro">Design by / Puha</div>
+                        <div class="content-main-pro">One night bar 1980s</div>
+                        <div class="more-info" id="info_2">One night at hero bar in 1980s where all ladies and gentelmen having crazy night</div>
+                        <button class="btn-info" id="show_2" >More Info</button>
+                    </span></div>
+            <div class="parallax-window colingnight" id='pic3' data-parallax="scroll" data-z-index="1" data-image-src="./anh/2.jpg">
+                <span class="pro-content" style="z-index: 9999;" id="procont3">
+                        <div class="desgin-pro">Design by / Puha</div>
+                        <div class="content-main-pro">One night bar 1980s</div>
+                        <div class="more-info" id="info_3">One night at hero bar in 1980s where all ladies and gentelmen having crazy night</div>
+                        <button class="btn-info"  id="show_3" >More Info</button>
+                    </span></div>
+            <div class="parallax-window rowimgnight" id='pic4' data-parallax="scroll" data-z-index="1" data-image-src="./anh/1.jpg">
+                <span class="pro-content" style="z-index: 9999;" id="procont4">
+                        <div class="desgin-pro">Design by / Puha</div>
+                        <div class="content-main-pro">One night bar 1980s</div>
+                        <div class="more-info" id="info_4">One night at hero bar in 1980s where all ladies and gentelmen having crazy night</div>
+                        <button class="btn-info"  id="show_4">More Info</button>
+                    </span>
+            </div>
         </div>
-    </div>
-    <button class="btnviewnight" >View All >></button>`;
-
+        <button class="btnviewnight" >View All >></button>`)
+    }
+    ApiPortfolio();
+    let content4 = localStorage.getItem('content-night');
 
     procontent.innerHTML = content4;
     panel = document.getElementById('panel');
     dlbtn = document.getElementById('dlbtn');
     nlbtn = document.getElementById('nlbtn');
     nlbtn.addEventListener("click", function () {
-        // nlbtn.style.backgroundColor = '#333';
-        // nlbtn.style.color = '#fff';
-        // nlbtn.style.border = '4px solid #333'
-        // dlbtn.style.backgroundColor = "#fff";
-        // dlbtn.style.border = '4px solid #dedede';
-        // dlbtn.style.color = '#333';
         localStorage.setItem('daylife', 'night');
         window.location.reload();
     });
@@ -102,7 +103,7 @@ if (daylifecontent == "night") {
             </div>
         </div>
     </div>
-    <div class="content4-text">
+    <div class="content4-text" style="font-family: 'Crimson Text', serif;">
         <div class="content4-headertext">Hello There,</div>
         <div class="content4-middletext">We're just two lost Souls swimming in a Fish Bowl & Winning Design Awards
         </div>
@@ -220,6 +221,10 @@ window.onload = function () {
         }, 1000);
         setTimeout(function () {
             preloading.style.display = 'none';
+            preleft.style.display='none';
+            preright.style.display='none';
+            layoutleft.style.display='none';
+            layoutright.style.display='none';
         }, 1500);
     };
     showup();
@@ -246,6 +251,11 @@ window.onload = function () {
     let procont2 = document.getElementById('procont2');
     let procont3 = document.getElementById('procont3');
     let procont4 = document.getElementById('procont4');
+    let teamitem1 = document.getElementById('teamitem1');
+    let teamitem2 = document.getElementById('teamitem2');
+    let teamitem3 = document.getElementById('teamitem3');
+    let teamitem4 = document.getElementById('teamitem4');
+    let cuoi = document.getElementById("cuoi");
     window.addEventListener("scroll", function () {
         let x = pageYOffset;
         if (x > 400 && x < 1300) {
@@ -306,10 +316,42 @@ window.onload = function () {
         } else if (z >= 4800 && z < 5200) {
             procont4.style.animation = 'procont4 1s ease-in-out';
             procont4.style.right = '32vw';
+        } else if (z>=6599 && z<=8200){
+            teamitem1.style.animation = 'itemmoveright .7s ease-in-out';
+            teamitem1.style.marginLeft= '0vw';
+        }
+        let z1 = pageYOffset
+        if (z1>=7001 && z<=8677){
+            teamitem2.style.animation = 'itemmovetop2 .7s ease-in-out';
+            teamitem2.style.top= '-45vh';
+        }
+        let z2 = pageYOffset
+        if (z2>=7401 && z<=8800){
+            teamitem3.style.animation = 'itemmoveright .7s ease-in-out';
+            teamitem3.style.marginLeft= '0vw';
+        }
+        let z3 = pageYOffset 
+        if (z3>=7701 && z<=9600){
+            teamitem4.style.animation = 'itemmovetop4 .7s ease-in-out';
+            teamitem4.style.top= '-125vh';
+        }
+        let z4 = pageYOffset
+        if(z4>=9200){
+            cuoi.style.width='300px';
         }
     })
 };
+async function demoApiGetAllAbout() {
+    const response = await fetch('https://5f37ee6ebbfd1e00160bf74a.mockapi.io/api/About/1');
+    const data = await response.json();
+    console.log(data);
+    rdText.innerText = data.text;
+    abpic.style.backgroundImage = `url('${data.img}')`;
+};
 
+demoApiGetAllAbout();
+
+console.log(pageYOffset);
 function show(a) {
     document.getElementById(`info_${a}`).style.display = 'block';
     document.getElementById(`info_${a}`).style.animation = 'sp-animate2 .5s ease-in-out';
@@ -321,22 +363,24 @@ for (let i = 1; i < 5; i++) {
 }
 
 var mySwiper = new Swiper('.swiper-container', {
-    // Các Parameters
+    
     loop: true,
 
-    // Nếu cần pagination
     pagination: {
         el: '.swiper-pagination',
     },
 
-    // Nếu cần navigation
+
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
 
-    // Nếu cần scrollbar
     scrollbar: {
         el: '.swiper-scrollbar',
+    },
+    autoplay: 
+    {
+      delay: 5000,
     },
 })

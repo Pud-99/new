@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="">
     <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://kit.fontawesome.com/814f87baf2.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    
+    <div id="container">
+       
+        <div class="title">
+            <h1>LOGIN QUICK</h1>
+        </div>
+        <div class="box">
+            <div class=" name">
+                <input placeholder="Name" id='uid' class="user" type="email" style="font-family:'Open Sans', sans-serif" required>
+               
+            </div>
+            <div class=" password">
+                <input placeholder="Password" id='pass' class="pass" type="password" required>
+                
+            </div>
+
+            <div class="login">
+                <button type="submit" id='btnLogin' name="submit" class="cnt1_submit">LOG IN </button>
+            </div>
+        </div>
+    </div>
+    <script src="./login.js"></script>
 </body>
+
 </html>

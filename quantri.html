@@ -13,16 +13,75 @@
         <button id="helpdesk-btn">Helpdesk</button>
         <button id="edit-btn">Edit display content</button>
     </div>
-    <table id="table">
-        <tr>
-            <th>Number</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Message</th>
-            <th>Time sent</th>
-            <th>Status</th>
-        </tr>
-    </table>
+    <a href="#" id='logoutBtn' style="color: red; float: right; margin-bottom: 2vh; margin-right: 1vw;"> Log Out</a>
+    <div class="home" id = 'home'>
+        <div class="contactInfo">
+            <span>All contact done in this month :</span>
+            <span id="contactNumber"></span>
+        </div>
+        <table id="table">
+            <tr>
+                <th>Number</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Message</th>
+                <th>Time sent</th>
+                <th>Status</th>
+            </tr>
+        </table>
+    </div>
+    <div class="display" id="display">
+        <div class="nav-display">
+            <ul class="nav-ul">
+                <li><a href="#" id="home">Home</a></li>
+                <li><a href="#" id="abUs">About us</a></li>
+                <li><a href="#" id="port">Portfolio</a></li>
+                <li><a href="#" id="serv">Service</a></li>
+                <li><a href="#" id="team">Team Member</a></li>
+                <li><a href="#" id="contact">Contact</li>
+            </ul>
+        </div>
+
+        <div class="display-content" id = "abUscontent">
+            <div class="home"></div>
+            <div class="about-us">
+                <span>About Us Input</span>
+                <input type="text" id ="about-text">
+                <p>About Us Image</p>
+                <span><input type="file" id="file"></span>
+                <button id="about-changes">Changes</button>
+            </div>
+        </div>
+        <div class="display-content" id="portcontent">
+            <div class="content-day">
+                <p style="font-size: 30px; font-weight: 800;">Daylife</p>
+                <p class="produce">Pick a produce </p>
+                <span><input id="pickProDay"></span>
+                <p>image</p>
+                <span><input type="file" id="proFileDay" ></span>
+                <p>Desgin by</p>
+                <span><input type="text" id="proDesginDay"></span>
+                <p>Produce content</p>
+                <span><input type="text" id="proContentDay"></span>
+                <p>Produce Info</p>
+                <span><input type="text" id="proInfoDay"></span>
+            </div>
+            <div class="content-night">
+                <p style="font-size: 30px; font-weight: 800;">Nightlife</p>
+                <p class="produce">Pick a produce </p>
+                <input id="pickProNight">
+                <p>image</p>
+                <span><input type="file" id="proFileNight" ></span>
+                <p>Desgin by</p>
+                <span><input type="text" id="proDesginNight"></span>
+                <p>Produce content</p>
+                <span><input type="text" id="proContentNight"></span>
+                <p>Produce Info</p>
+                <span><input type="text" id="proInfoNight"></span>
+            </div>
+            <button id='proChanges'>Changes</button>
+        </div>
+    </div>
     <script src="./quantri.js"></script>
 </body>
 </html>

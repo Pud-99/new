@@ -6,7 +6,8 @@ let timenow = new Date();
 let timeString = dayjs(timenow).format('DD/MM/YYYY:HH:mm');
 console.log(timeString.value);
 //get
-async function demoApiGetAll (){
+
+async function demoApiGetAll() {
     const response = await fetch('https://5f37ee6ebbfd1e00160bf74a.mockapi.io/api/contact');
     const data = await response.json();
     console.log(data);
@@ -16,28 +17,32 @@ demoApiGetAll();
 
 const contactApiPost = async () => {
     const response = await fetch('https://5f37ee6ebbfd1e00160bf74a.mockapi.io/api/contact',
-    {
-        method:'POST',
-        headers:{
-            Accept:'application/json',
-            'Content-Type':'application/json',
-        },
-        body: JSON.stringify({
-            ten:input_name.value,
-            email:input_email.value,
-            mess:input_mess.value,
-            time:timeString
-        }),
-    });
+        {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                ten: input_name.value,
+                email: input_email.value,
+                mess: input_mess.value,
+                time: timeString
+            }),
+        });
     const content = await response.json();
     alert('Send message success');
-    input_name.value='';
-    input_email.value='';
-    input_mess.value='';
+    input_name.value = '';
+    input_email.value = '';
+    input_mess.value = '';
 };
 
-send_mess.addEventListener("click",() => contactApiPost());
-console.log(send_mess);
+send_mess.addEventListener("click", function () {
+    if (input_email.value != '' && input_name.value != '' && input_mess.value != '') {
+        contactApiPost();
+    } else (alert('You must input all information!'));
+});
+
 
 // create 
 

@@ -10,12 +10,12 @@
 body {
     position: relative;
     outline: none !important;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 }
 .pre-loading{
     display:flex;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     align-items: center;
     z-index: 999999999;
@@ -78,15 +78,15 @@ body {
 @keyframes preloadright {
     0%{
         height:0vh;
-        border-right: 1px solid white;
+        border-left: 1px solid white;
     }
     60%{
         height:30vh;
-        border-right: 0.5px solid white;
+        border-left: 0.5px solid white;
     }
     100%{
         height:100vh;
-        border-right: 0px solid white;
+        border-left: 0px solid white;
     }
 }
 @keyframes premoveleft{
@@ -110,7 +110,7 @@ body {
         right:50vw;
     }
     100%{
-        right:100vw;
+        right:100%;
     }
 }
 @keyframes layoutright {
@@ -136,7 +136,7 @@ video {
 .layout {
     z-index: -999;
     position: absolute;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 }
 
@@ -178,11 +178,11 @@ video {
     /* background-image: url(https://rokstar-portfolio.netlify.app/assets/img/bg/slider-bg.jpg); */
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.87);
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-position: center;
     background-size: cover;
-    color: #ffffff;
+    color: #f0f0f0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -191,12 +191,16 @@ video {
     object-fit: cover;
 }
 
+
 .nav {
     display: flex;
     flex-direction: row;
-    width: 100vw;
+    width: 100%;
 }
-
+.nav-item a:hover{
+    cursor: pointer;
+    color:rgb(182, 182, 182) !important;
+}
 .logo {
     margin-left: 10vw;
     margin-top: 3vh;
@@ -294,7 +298,7 @@ video {
 
 .content2 {
     display: flex;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     /* margin-top: 10vh; */
 }
@@ -304,7 +308,7 @@ video {
     height: 60vh;
     margin-left: 8vw;
     margin-top: 28vh;
-    background-image: url(https://rokstar-portfolio.netlify.app/assets/img/about/abt-left-thumb.jpg);
+    /* background-image: url(https://rokstar-portfolio.netlify.app/assets/img/about/abt-left-thumb.jpg); */
     box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.3);
     border-radius: 4px;
     background-position: center;
@@ -439,7 +443,7 @@ a {
 
 .content3 {
     display: flex;
-    width: 100vw;
+    width: 100%;
     margin-top: 14vh;
 }
 
@@ -452,6 +456,7 @@ a {
     padding-top: 2vh;
     box-sizing: border-box;
     border-radius: 4px;
+    transition: all .5s ease-in-out;
 }
 
 .sp-ab:hover {
@@ -544,7 +549,7 @@ a {
 .content4 {
     display: flex;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     height: 480vh;
     margin-top: 10vh;
     align-items: center;
@@ -555,7 +560,7 @@ a {
 }
 .layout-pro{
     clip-path: polygon(35% 0, 69% 5%, 100% 0, 100% 100%, 0 100%, 0 5%);
-    width: 100vw;
+    width: 100%;
     height: 480vh;
     position: absolute;
     z-index: -2;
@@ -575,7 +580,7 @@ a {
 .content4-headertext {
     font-weight: 700;
     margin-bottom: 1.5rem;
-    font-size: 1.19rem;
+    font-size: 1.49rem;
     color: #909090;
 }
 #headernight{
@@ -588,7 +593,7 @@ a {
     color: #fff;
 }
 .content4-middletext {
-    font-size: 3.0517rem;
+    font-size: 3.4517rem;
     font-weight: 700;
     line-height: 1;
     color: inherit;
@@ -598,7 +603,7 @@ a {
 }
 
 .content4-bottomtext {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     font-weight: 400;
     color: #909090;
     width: 50vw;
@@ -612,7 +617,7 @@ a {
 .product-daylife {
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
     margin-top: 20vh;
 }
 
@@ -812,8 +817,7 @@ button {
 }
 .btnviewnight:hover{
     cursor: pointer;
-    background-color: #fff;
-    color:black;
+    border: 4px solid white !important;
 }
 .panel{
     display: flex;
@@ -918,12 +922,12 @@ button {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
     height: 130vh;
     align-items: center;
 } */
 .swiper-container {
-   width: 100vw;
+   width: 100%;
    height: 100vh;
 }
 .swiper-container:active{
@@ -943,7 +947,7 @@ button {
     
 }
 .layout-serv{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     position: absolute;
     background-color: #333;
@@ -956,6 +960,7 @@ button {
     width: 30vw;
     height: 70vh;
     margin-left: 10vw;
+    
 }
 
 .content-serv-main{
@@ -963,18 +968,21 @@ button {
     color: #fff;
     border-bottom: 1px solid white;
     width: 14vw;
+    font-family: 'Dancing Script', cursive;
 }
 .content-serv-text{
     margin-top:3vh;
-    font-size: 19px;
+    font-size: 26px;
     font-style: italic;
     color: #dedede;
     line-height: 4vh;
+    font-family: 'Caveat', cursive;
 }
 .content-serv-price{
     margin-top:5vh;
-    font-size: 22px;
+    font-size: 29px;
     color: #f3f2f2;
+    font-family: 'Caveat', cursive;
 }
 .content-service{
     font-size: 60px;
@@ -982,7 +990,8 @@ button {
     font-weight: 800;
     margin-bottom: 2vh;
     color: rgb(255, 225, 188);
-   
+    font-family: 'Permanent Marker', cursive;
+    letter-spacing: 7px;
 }
 
 /* ----------------------------------------------------------content6--------------------------------------------- */
@@ -990,14 +999,14 @@ button {
 
 .content6{
     display: flex;
-    width: 100vw;
+    width: 100%;
     background-color:rgb(184, 184, 184);
     flex-direction: column;
     height: 300vh;
     clip-path: polygon(0 0, 100% 0, 100% 94%, 65% 100%, 35% 94%, 0 100%);
 }
 .team-content{
-    /* width: 100vw; */
+    /* width: 100%; */
     margin-left: 60vw;
     margin-top: 15vh;
 }
@@ -1024,7 +1033,7 @@ button {
 }
 
 .team-item{
-width: 93vw;
+width: 91vw;
 position: relative;
 top:-30vh;
 left:7vw;
@@ -1033,16 +1042,18 @@ height: 280vh;
 #teamitem2{
     position: relative;
     left: 47vw;
-    top: -45vh;
+    top: -5vh;
+    /* animation: itemmoveleft 1s ease-in-out; */
 }
 #teamitem3{
     position: relative;
     top: -75vh;
+    margin-left: -45vw;
 }
 #teamitem4{
     position: relative;
     left: 47vw;
-    top: -125vh;
+    top: -85vh;
 }
 #teamitem4 .team-name{
     left: -14vw !important;
@@ -1050,7 +1061,34 @@ height: 280vh;
 #teamitem4 #share-team{
     left: 1vw !important;
 }
-
+#teamitem1{
+    margin-left: -45vw;
+    /* animation: itemmoveright 1s ease-in-out; */
+}
+@keyframes itemmoveright{
+    0%{
+        margin-left:-45vw;
+    }
+    100%{
+        margin-left: 0vw;
+    }
+}
+@keyframes itemmovetop2{
+    0%{
+        top:-5vh;
+    }
+    100%{
+        top:-45vh;
+    }
+}
+@keyframes itemmovetop4{
+    0%{
+        top:-85vh;
+    }
+    100%{
+        top:-125vh;
+    }
+}
 .teamitemcontent{
     width: 40vw;
     height: 90vh;
@@ -1110,7 +1148,7 @@ color: #f3f2f2;
 }
 /* -----------------------------------------------------------content7------------------------------------------------ */
 .content7{
-    width:100vw;
+    width:100%;
     height: 40vh;
     display:flex;
     justify-content: space-around;
@@ -1155,13 +1193,14 @@ margin-bottom:3px;
     transition: all 0.4s ease 0s;
 }
 .cuoi{
-    width: 300px;
+    width: 0px;
     opacity: 1;
     position: absolute;
     height: 1px;
     background: black;
-    transition: all 0.4s ease 0s;
+    transition: all 1s ease-in-out;
     margin-top: 3px;
+
 }
 .col-left{
     box-sizing:border-box;
@@ -1306,7 +1345,7 @@ text-size-adjust:100%;
 
 .footer{
     display: flex;
-    width: 100vw;
+    width: 100%;
     height: 15vh;
     background-color: #f9f9f9;
     margin-top: 13vh;
