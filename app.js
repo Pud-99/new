@@ -37,7 +37,7 @@ if (daylifecontent == "night") {
             <div class="content4-bottomtext"id='bottomnight'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, et, praesentium? Odit perferendis error natus cum, laudantium ea!</div>
         </div>
         <div class="product-daylife" id="daylife">
-            <div class="parallax-window rowimgnight" id='pic1' data-parallax="scroll" data-z-index="1" data-image-src="${data[5].img}">
+            <div class="parallax-window rowimgnight" id='pic1' data-parallax="scroll" data-z-index="1" data-image-src="${data[4].img}">
                 <span class="pro-content" style="z-index: 9999;" id="procont1">
                     <div class="desgin-pro">Design by / Puha</div>
                     <div class="content-main-pro">One night bar 1980s</div>
